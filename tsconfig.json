@@ -1,13 +1,15 @@
 {
-  "exclude": ["./client", "server/**/*.spec.ts"],
   "compilerOptions": {
     "target": "es2016",
     "module": "commonjs",
-    "outFile": "./index.js",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "removeComments": true,
     "strict": true,
     "noImplicitAny": true,
-    "skipLibCheck": true
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "client"
+  ]
 }
