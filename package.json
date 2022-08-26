@@ -5,7 +5,8 @@
   "author": "twsau",
   "license": "MIT",
   "scripts": {
-    "dev": "concurrently --kill-others \"nodemon index.ts\" \"cd client && yarn dev\"",
+    "start": "node build/index.js",
+    "dev": "NODE_ENV=development concurrently --kill-others \"nodemon index.ts\" \"cd client && yarn dev\"",
     "build": "concurrently \"mkdir -p build && yarn exec tsc-bundle tsconfig.json && mv bundle.js build/index.js\" \"cd client && yarn build\""
   },
   "dependencies": {
