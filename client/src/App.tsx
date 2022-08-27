@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
-import axios from "axios";
 function App() {
   const [count, setCount] = useState(0);
   const [loading, setLoading] = useState<boolean>(true);
@@ -9,15 +8,10 @@ function App() {
 
   useEffect(() => {
     if (!loading) return;
-    axios
-      .get("/api/hello-world")
-      .then((response) => {
-        setApiStatus(response.data.message);
-      })
-      .catch((error) => {
-        setApiStatus(error.message);
-      })
-      .then(() => setLoading(false));
+    fetch("/api/hello-world")
+      .then((response) => response.json())
+      .then(({ message }) => setApiStatus(message))
+      .catch(({ message }) => setApiStatus(message));
   }, []);
 
   return (
