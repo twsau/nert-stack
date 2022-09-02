@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import reactLogo from "./assets/react.svg";
-import "./App.css";
-function App() {
-  const [count, setCount] = useState(0);
+
+export const App = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [apiStatus, setApiStatus] = useState<string>("loading...");
 
@@ -11,34 +10,23 @@ function App() {
     fetch("/api/hello-world")
       .then((response) => response.json())
       .then(({ message }) => setApiStatus(message))
-      .catch(({ message }) => setApiStatus(message));
+      .catch(({ message }) => setApiStatus(message))
+      .then(() => setLoading(false));
   }, []);
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-      <code>API response: {apiStatus}</code>
-    </div>
+    <>
+      <main>
+        <h2>node | express | react | typescript</h2>
+        <ul>
+          <li>bossweb.dev reset + open-props / normalize</li>
+          <li>api integration: {apiStatus}</li>
+          <li>yarn | vite</li>
+        </ul>
+      </main>
+      <footer>
+        <a href="https://bossweb.dev">bossweb.dev</a>
+      </footer>
+    </>
   );
-}
-
-export default App;
+};
