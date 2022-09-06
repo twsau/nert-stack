@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import reactLogo from "./assets/react.svg";
+import { Card, Footer, Header, Main } from "./components";
 
 export const App = () => {
   const [loading, setLoading] = useState<boolean>(true);
@@ -16,17 +16,38 @@ export const App = () => {
 
   return (
     <>
-      <main>
-        <h2>node | express | react | typescript</h2>
-        <ul>
-          <li>bossweb.dev reset + open-props / normalize</li>
-          <li>api integration: {apiStatus}</li>
-          <li>yarn | vite</li>
-        </ul>
-      </main>
-      <footer>
+      <Header>
+        <h2 className="text-gradient">bossweb.dev</h2>
+      </Header>
+      <Main>
+        <h1 className="text-gradient">N E R T</h1>
+        <p>node | express | react | typescript</p>
+        <Card type="primary">
+          <p>
+            nert stack is everything you need to get started with build a react
+            app in typescript. It has a built in nodejs / express backend with
+            API routing ready to go. It's also built using yarn and vite and
+            implements <a href="https://open-props.style/">open-props</a> /{" "}
+            <a href="https://twsau.github.io/boss-styles/">boss-styles</a> to
+            set global styles.
+          </p>
+          <ul>
+            <li>bossweb.dev reset + open-props / normalize / boss-styles</li>
+            <li>
+              api routing. Edit <code>api.ts</code> to get started.
+            </li>
+            <li>built using yarn & vite for max build speed 🔥🔥🔥</li>
+          </ul>
+        </Card>
+        <Card type="accent">
+          <pre>
+            API response: <code>{apiStatus}</code>
+          </pre>
+        </Card>
+      </Main>
+      <Footer>
         <a href="https://bossweb.dev">bossweb.dev</a>
-      </footer>
+      </Footer>
     </>
   );
 };
