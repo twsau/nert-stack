@@ -20,8 +20,12 @@ export const App = () => {
         <h2 className="text-gradient">bossweb.dev</h2>
       </Header>
       <Main>
-        <h1 className="text-gradient">N E R T</h1>
-        <p>node | express | react | typescript</p>
+        <h1 className="text-gradient" style={{ textAlign: "center" }}>
+          N E R T
+        </h1>
+        <p style={{ textAlign: "center" }}>
+          node | express | react | typescript
+        </p>
         <Card type="primary">
           <p>
             nert stack is everything you need to get started with build a react
