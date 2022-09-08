@@ -6,7 +6,7 @@ interface RowProps {
 
 export const Row = styled.div<RowProps>`
   display: flex;
-  gap: var(--size-3);
+  gap: var(--size-2);
   justify-content: ${(props) => props.justify ?? "flex-start"};
-  margin-block: var(--size-3);
+  margin-block: var(--size-2);
 `;

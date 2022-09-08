@@ -19,7 +19,9 @@ export const App = () => {
   return (
     <>
       <Header>
-        <h2 className="text-gradient">bossweb.dev<sup> / nert</sup></h2>
+        <h2 className="text-gradient">
+          bossweb.dev<sup> / nert</sup>
+        </h2>
       </Header>
       <Main>
         <h1 className="text-gradient" style={{ textAlign: "center" }}>
@@ -57,8 +59,12 @@ export const App = () => {
         <Card title="state">
           <Counter />
         </Card>
-        <Card type="primary" title="core components">
-          <List numbered items={["egg", "cheese", <h3>ham</h3>]} />
+        <Card title="core components">
+          <List numbered items={["egg", "cheese", "ham", "milk"]} />
+          <Row justify="center">
+            <span className="icon">description</span>
+            <a href="http://localhost:6006/">view documentation</a>
+          </Row>
         </Card>
       </Main>
       <Footer>
