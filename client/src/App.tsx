@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
-import { Card, Footer, Header, Main } from "./components";
+import { Card, Footer, Header, Main, Row } from "./core/layout";
+import { List } from "./core/components";
+import { Counter } from "./components";
 
 export const App = () => {
   const [loading, setLoading] = useState<boolean>(true);
@@ -47,6 +49,12 @@ export const App = () => {
           <pre>
             API response: <code>{apiStatus}</code>
           </pre>
+        </Card>
+        <Card title="state">
+          <Counter />
+        </Card>
+        <Card type="primary" title="core components">
+          <List numbered items={["egg", "cheese", <h3>ham</h3>]} />
         </Card>
       </Main>
       <Footer>

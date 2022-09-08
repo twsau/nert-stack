@@ -1,6 +1,3 @@
-import { Card } from "./_Card";
-import { Footer } from "./_Footer";
-import { Header } from "./_Header";
-import { Main } from "./_Main";
+import { Counter } from "./_Counter";
 
-export { Card, Footer, Header, Main };
+export { Counter };

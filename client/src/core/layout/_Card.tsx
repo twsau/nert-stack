@@ -1,10 +1,12 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 interface CardProps {
-  type?: "primary" | "accent" | undefined;
+  children?: React.ReactNode;
+  title?: string;
+  type?: "primary" | "accent";
 }
 
-export const Card = styled.section<CardProps>`
+const Wrapper = styled.section<CardProps>`
   border: 1px solid;
   border-color: ${(p: CardProps) =>
     p.type === "primary"
@@ -34,4 +36,21 @@ export const Card = styled.section<CardProps>`
     position: absolute;
     z-index: -1;
   }
+
+  & > h3 {
+    color: ${({ type }: CardProps) =>
+      type === "primary"
+        ? `var(--primary)`
+        : type === "accent"
+        ? "var(--accent)"
+        : "var(--text)"};
+    text-align: center;
+  }
 `;
+
+export const Card = ({ children, title, type }: CardProps) => (
+  <Wrapper type={type}>
+    {title && <h3>{title}</h3>}
+    {children}
+  </Wrapper>
+);
