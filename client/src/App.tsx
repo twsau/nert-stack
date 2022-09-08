@@ -26,7 +26,10 @@ export const App = () => {
           N E R T
         </h1>
         <p style={{ textAlign: "center" }}>
-          node | express | react | typescript
+          <a href="https://nodejs.dev/en/">node</a> |{" "}
+          <a href="https://expressjs.com/">express</a> |{" "}
+          <a href="https://reactjs.org/">react</a> |{" "}
+          <a href="https://www.typescriptlang.org/">typescript</a>
         </p>
         <Card type="primary">
           <p>
