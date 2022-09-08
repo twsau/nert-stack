@@ -13,6 +13,7 @@ const Count = styled.code`
 
 export const Counter = () => {
   const [count, setCount] = useState<number>(0);
+  const decrement = () => (count > 0 ? setCount(count - 1) : "");
   const increment = () => setCount(count + 1);
   const reset = () => setCount(0);
 
@@ -25,11 +26,11 @@ export const Counter = () => {
         <Count>{zeroPad(count, 3)}</Count>
       </Row>
       <Row justify="center">
-        <button onClick={reset} type="reset">
-          reset
+        <button onClick={decrement}>
+          <span className="icon">remove</span>
         </button>
-        <button onClick={increment} type="submit">
-          increment
+        <button onClick={increment}>
+          <span className="icon">add</span>
         </button>
       </Row>
     </>
