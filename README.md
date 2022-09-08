@@ -9,12 +9,12 @@ node | express | react | typescript
 
 ## core components
 
-- <List /> : numbered / unordered
+- List : numbered / unordered
 
 ## layout components
 
-- <Card />
-- <Footer />
-- <Header />
-- <Main />
-- <Row />
+- Card
+- Footer
+- Header
+- Main
+- Row
