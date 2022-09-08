@@ -9,7 +9,7 @@ export const List = ({ items, numbered }: ListProps) => {
   return (
     <ListType>
       {items.map((item) => (
-        <li>{typeof item}</li>
+        <li>{item}</li>
       ))}
     </ListType>
   );
