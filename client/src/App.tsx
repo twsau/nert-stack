@@ -31,6 +31,7 @@ export const App = () => {
           <a href="https://reactjs.org/">react</a> |{" "}
           <a href="https://www.typescriptlang.org/">typescript</a>
         </p>
+        <hr />
         <Card type="primary">
           <p>
             nert stack is everything you need to get started with build a react
