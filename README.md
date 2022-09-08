@@ -6,3 +6,15 @@ node | express | react | typescript
 - typescript
 - vite
 - ???? PROFIT!!!!
+
+## core components
+
+- <List /> : numbered / unordered
+
+## layout components
+
+- <Card />
+- <Footer />
+- <Header />
+- <Main />
+- <Row />
