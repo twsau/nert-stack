@@ -5,4 +5,6 @@ export const Footer = styled.footer`
   display: flex;
   justify-content: center;
   padding: var(--size-3);
+  position: sticky;
+  top: 100vh;
 `;

@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import { Card, Footer, Header, Main, Row } from "./core/layout";
-import { List } from "./core/components";
+import { List, useModal } from "./core/components";
 import { Counter } from "./components";
+import { ExampleModal } from "./views/modals";
 
 export const App = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [apiStatus, setApiStatus] = useState<string>("loading...");
+  const { showModal } = useModal();
 
   useEffect(() => {
     if (!loading) return;
@@ -60,11 +62,16 @@ export const App = () => {
           <Counter />
         </Card>
         <Card title="core components">
-          <List numbered items={["egg", "cheese", "ham", "milk"]} />
-          <Row justify="center">
+          <Row>
+            <List numbered items={["egg", "cheese", "ham", "milk"]} />
+          </Row>
+          <Row>
+            <button onClick={() => showModal(<ExampleModal />)}>modal</button>
+          </Row>
+          {/* <Row justify="center">
             <span className="icon">description</span>
             <a href="http://localhost:6006/">view documentation</a>
-          </Row>
+          </Row> */}
         </Card>
       </Main>
       <Footer>
