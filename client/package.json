@@ -11,8 +11,6 @@
     "build-storybook": "build-storybook -o ../docs"
   },
   "dependencies": {
-    "@types/react-modal": "^3.13.1",
-    "@types/uuid": "^8.3.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-modal": "^3.15.1",
@@ -21,6 +19,8 @@
     "zustand": "^4.1.1"
   },
   "devDependencies": {
+    "@types/react-modal": "^3.13.1",
+    "@types/uuid": "^8.3.4",
     "@babel/core": "^7.19.0",
     "@storybook/addon-actions": "^6.5.10",
     "@storybook/addon-essentials": "^6.5.10",
