@@ -1,3 +1,5 @@
+import { v4 as uuid } from "uuid";
+
 interface ListProps {
   items: any[];
   numbered?: boolean;
@@ -9,7 +11,7 @@ export const List = ({ items, numbered }: ListProps) => {
   return (
     <ListType>
       {items.map((item) => (
-        <li>{item}</li>
+        <li key={uuid()}>{item}</li>
       ))}
     </ListType>
   );
