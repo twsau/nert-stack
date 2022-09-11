@@ -15,14 +15,13 @@ export const Counter = () => {
   const [count, setCount] = useState<number>(0);
   const decrement = () => (count > 0 ? setCount(count - 1) : "");
   const increment = () => setCount(count + 1);
-  const reset = () => setCount(0);
 
   const zeroPad = (num: number, places: number) =>
     String(num).padStart(places, "0");
 
   return (
     <>
-      <Row justify="center">
+      <Row justify="center" padding={3}>
         <Count>{zeroPad(count, 3)}</Count>
       </Row>
       <Row justify="center">

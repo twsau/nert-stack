@@ -27,9 +27,10 @@ export const App = () => {
         </h2>
       </Header>
       <Main>
-        <h1 className="text-gradient" style={{ textAlign: "center" }}>
-          N E R T
-        </h1>
+        <hr />
+        <Row justify="center">
+          <h1 className="text-gradient">N E R T</h1>
+        </Row>
         <p style={{ textAlign: "center" }}>
           <a href="https://nodejs.dev/en/">node</a> |{" "}
           <a href="https://expressjs.com/">express</a> |{" "}
@@ -74,10 +75,6 @@ export const App = () => {
             notification
             <button onClick={() => msg(<ExampleNotification />)}>test</button>
           </label>
-          {/* <Row justify="center">
-            <span className="icon">description</span>
-            <a href="http://localhost:6006/">view documentation</a>
-          </Row> */}
         </Card>
       </Main>
       <Footer>

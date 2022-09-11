@@ -3,7 +3,7 @@ import styled from "styled-components";
 interface CardProps {
   children?: React.ReactNode;
   title?: string;
-  type?: "primary" | "accent";
+  type?: "primary" | "accent" | "border";
 }
 
 const Wrapper = styled.section<CardProps>`
@@ -48,9 +48,11 @@ const Wrapper = styled.section<CardProps>`
   }
 `;
 
-export const Card = ({ children, title, type }: CardProps) => (
-  <Wrapper type={type}>
-    {title && <h3>{title}</h3>}
-    {children}
-  </Wrapper>
-);
+export const Card = ({ children, title, type }: CardProps) => {
+  return (
+    <Wrapper type={type}>
+      {title && <h3>{title}</h3>}
+      {children}
+    </Wrapper>
+  );
+};
