@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { Card, Footer, Header, Main, Row } from "./core/layout";
-import { List, useModal } from "./core/components";
+import { List, msg, useModal } from "./core/components";
 import { Counter } from "./components";
 import { ExampleModal } from "./views/modals";
+import { ExampleNotification } from "./views/notifications";
 
 export const App = () => {
   const [loading, setLoading] = useState<boolean>(true);
@@ -65,9 +66,14 @@ export const App = () => {
           <Row>
             <List numbered items={["egg", "cheese", "ham", "milk"]} />
           </Row>
-          <Row>
-            <button onClick={() => showModal(<ExampleModal />)}>modal</button>
-          </Row>
+          <label>
+            modal
+            <button onClick={() => showModal(<ExampleModal />)}>test</button>
+          </label>
+          <label>
+            notification
+            <button onClick={() => msg(<ExampleNotification />)}>test</button>
+          </label>
           {/* <Row justify="center">
             <span className="icon">description</span>
             <a href="http://localhost:6006/">view documentation</a>
