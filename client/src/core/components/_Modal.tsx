@@ -15,14 +15,14 @@ const style = {
     animation: "var(--animation-fade-in) forwards",
     backdropFilter: "blur(5px) brightness(0.9)",
     display: "flex",
-    inest: 0,
-    opactiy: 0,
+    inset: 0,
+    opacity: 0,
     position: "fixed",
   },
   content: {
     animation: "var(--animation-slide-in-up)",
     backgroundColor: "var(--surface-1)",
-    border: "1px solid var(--text)",
+    border: "1px solid var(--text-1)",
     borderRadius: "var(--radius-2)",
     boxShadow: "var(--shadow-2)",
     height: "fit-content",
@@ -46,11 +46,9 @@ export const Modal = () => {
   return (
     <ReactModal
       children={content}
-      // className="modal"
       isOpen={isOpen}
       onRequestClose={() => setOpen(false)}
       style={style}
-      // overlayClassName="modal-container"
     />
   );
 };

@@ -3,6 +3,7 @@ import toast, { Toaster } from "react-hot-toast";
 export const Notifications = () => (
   <Toaster
     toastOptions={{
+      position: "top-right",
       style: {
         backgroundColor: "var(--surface-1)",
         border: "1px solid var(--surface-4)",

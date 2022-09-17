@@ -4,6 +4,7 @@ import { List, msg, useModal } from "./core/components";
 import { Counter } from "./components";
 import { ExampleModal } from "./views/modals";
 import { ExampleNotification } from "./views/notifications";
+import styled from "styled-components/macro";
 
 export const App = () => {
   const [loading, setLoading] = useState<boolean>(true);
@@ -21,12 +22,26 @@ export const App = () => {
 
   return (
     <>
-      <Header>
+      <header
+        css={`
+          display: flex;
+          justify-content: center;
+        `}
+      >
         <h2 className="text-gradient">
           bossweb.dev<sup> / nert</sup>
         </h2>
-      </Header>
-      <Main>
+      </header>
+      <main
+        css={`
+          display: flex;
+          flex-direction: column;
+          padding-inline: 1rem;
+          gap: var(--size-3);
+          margin: 0 auto;
+          max-width: var(--size-content-3);
+        `}
+      >
         <hr />
         <Row justify="center">
           <h1 className="text-gradient">N E R T</h1>
@@ -76,10 +91,20 @@ export const App = () => {
             <button onClick={() => msg(<ExampleNotification />)}>test</button>
           </label>
         </Card>
-      </Main>
-      <Footer>
+      </main>
+      <footer
+        css={`
+          display: flex;
+          justify-content: space-between;
+          margin-block-start: var(--size-10);
+          padding: var(--size-3);
+          position: sticky;
+          top: 100vh;
+        `}
+      >
+        <a href="https://github.com/twsau">twsau</a>
         <a href="https://bossweb.dev">bossweb.dev</a>
-      </Footer>
+      </footer>
     </>
   );
 };
