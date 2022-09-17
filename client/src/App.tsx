@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Card, Footer, Header, Main, Row } from "./core/layout";
+import { Card } from "./core/layout";
 import { List, msg, useModal } from "./core/components";
 import { Counter } from "./components";
 import { ExampleModal } from "./views/modals";
@@ -26,6 +26,7 @@ export const App = () => {
         css={`
           display: flex;
           justify-content: center;
+          padding-block-start: var(--size-3);
         `}
       >
         <h2 className="text-gradient">
@@ -43,10 +44,19 @@ export const App = () => {
         `}
       >
         <hr />
-        <Row justify="center">
-          <h1 className="text-gradient">N E R T</h1>
-        </Row>
-        <p style={{ textAlign: "center" }}>
+        <h1
+          className="text-gradient"
+          css={`
+            text-align: center;
+          `}
+        >
+          N E R T
+        </h1>
+        <p
+          css={`
+            text-align: center;
+          `}
+        >
           <a href="https://nodejs.dev/en/">node</a> |{" "}
           <a href="https://expressjs.com/">express</a> |{" "}
           <a href="https://reactjs.org/">react</a> |{" "}
@@ -79,9 +89,6 @@ export const App = () => {
           <Counter />
         </Card>
         <Card title="core components">
-          <Row>
-            <List numbered items={["egg", "cheese", "ham", "milk"]} />
-          </Row>
           <label>
             modal
             <button onClick={() => showModal(<ExampleModal />)}>test</button>
@@ -89,6 +96,14 @@ export const App = () => {
           <label>
             notification
             <button onClick={() => msg(<ExampleNotification />)}>test</button>
+          </label>
+          <label>
+            lists
+            <List items={["egg", "cheese", "milk"]} />
+          </label>
+          <label>
+            numbered lists
+            <List numbered items={["egg", "cheese", "milk"]} />
           </label>
         </Card>
       </main>
