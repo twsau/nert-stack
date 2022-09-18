@@ -68,23 +68,23 @@ export const App = () => {
           <p>
             nert stack is everything you need to get started with build a react
             app in typescript. It has a built in nodejs / express backend with
-            API routing ready to go and implements
+            API routing ready to go and implements{" "}
             <a href="https://open-props.style/">open-props</a> /
             <a href="https://twsau.github.io/boss-styles/">boss-styles</a> to
             set global styles.
           </p>
-          <ul>
-            <li>bossweb.dev reset + open-props / normalize / boss-styles</li>
-            <li>
-              api routing. Edit <code>api.ts</code> to get started.
-            </li>
-            <li>built using yarn & vite for max build speed 🔥🔥🔥</li>
-          </ul>
+          <p
+            css={`
+              font-size: var(--size-6);
+              text-align: center;
+            `}
+          >
+            🔥🔥🔥
+          </p>
         </Card>
         <Card title="api" type="accent">
           <p>
-            api routing is set up and ready to go! Try editing
-            <code>api.ts</code> to get started
+            Try editing <code>api.ts</code> to get started
           </p>
           <pre
             css={`
