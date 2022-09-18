@@ -1,20 +1,8 @@
 # nert-stack
 node | express | react | typescript
 
-- API routes under `/api/method-name` and `api.ts`
-- single command: `yarn dev` to live-edit both client and server files
-- typescript
-- vite
-- ???? PROFIT!!!!
+## setup
 
-## core components
-
-- List : numbered / unordered
-
-## layout components
-
-- Card
-- Footer
-- Header
-- Main
-- Row
+1. ```git clone git@github.com:twsau/nert-stack.git```
+2. ```yarn && cd client && yarn && cd .. && yarn dev```
+3. open ```http://localhost:3000/``` in your browser
