@@ -14,6 +14,7 @@ export const Counter = () => {
       css={`
         align-items: center;
         display: flex;
+        gap: var(--size-3);
         justify-content: space-evenly;
         padding-block: var(--size-3);
       `}
