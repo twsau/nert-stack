@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "dev": "NODE_ENV=development concurrently --kill-others \"nodemon index.ts\" \"cd client && yarn dev\"",
-    "build": "yarn tsc-bundle tsconfig.json && mv bundle.js index.js && cd client && yarn build"
+    "build": "yarn tsc-bundle tsconfig.json && mv bundle.js index.js && cd client && yarn build",
+    "make-dev": "yarn && cd client && yarn"
   },
   "dependencies": {
     "express": "^4.18.1"
