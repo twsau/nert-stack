@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { Card } from "./core/layout";
-import { List, msg, useModal } from "./core/components";
+import { List, msg, Tooltip, useModal } from "./core/components";
 import { Counter } from "./components";
 import { ExampleModal } from "./views/modals";
 import { ExampleNotification } from "./views/notifications";
+import { ExampleTooltip } from "./views/tooltips";
 import styled from "styled-components/macro";
 
 export const App = () => {
@@ -108,6 +109,12 @@ export const App = () => {
           <label>
             notification
             <button onClick={() => msg(<ExampleNotification />)}>test</button>
+          </label>
+          <label>
+            tooltip
+            <Tooltip content={<ExampleTooltip />}>
+              <button>test</button>
+            </Tooltip>
           </label>
           <label>
             lists
