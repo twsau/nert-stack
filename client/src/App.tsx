@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { Card } from "./components/Card";
+import styled from "styled-components/macro";
 import { Button } from "./components/Button";
 import { useModal } from "./components/Modal";
 import { Tooltip } from "./components/Tooltip";
-import { FiActivity } from "react-icons/fi";
+import { AiOutlineBuild, AiOutlineQuestionCircle } from "react-icons/ai";
 import { notify } from "./components/Notification";
 import { List } from "./components/List";
 
@@ -52,7 +53,7 @@ export const App = () => {
           padding: var(--size-3);
         `}
       >
-        <Card title="about" type="info">
+        <Card icon={<AiOutlineQuestionCircle />} title="about" type="info">
           <p>
             nert stack is everything you need to get started with build a react
             app in typescript. It has a built in nodejs / express backend with
@@ -70,7 +71,7 @@ export const App = () => {
             🔥🔥🔥
           </p>
         </Card>
-        <Card icon={<FiActivity />} title="components">
+        <Card icon={<AiOutlineBuild />} title="components">
           <label>
             modal
             <Button onClick={() => showModal(<p>hello!</p>)}>test</Button>

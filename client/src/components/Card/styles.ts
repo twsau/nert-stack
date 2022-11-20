@@ -35,8 +35,9 @@ export const CardTitle = styled.h3<{ type?: string }>`
 
 export const CardIcon = styled.span<{ type?: string }>`
   color: var(--surface-4);
+  filter: drop-shadow(1px 1px 5px rgba(46 51 64 / 1));
   font-size: var(--size-8);
-  inset: var(--size-1) var(--size-1) auto auto;
+  inset: var(--size-2) var(--size-2) auto auto;
   position: absolute;
 
   ${({ type }) =>
