@@ -9,6 +9,17 @@ import { notify } from "./components/Notification";
 import { List } from "./components/List";
 import { Form } from "./components/Form";
 
+const exampleModal: ModalView = {
+  content: (
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur vitae
+      odio praesentium illo voluptatibus error sit consectetur, tempore commodi
+      ab deleniti mollitia magni voluptas natus beatae saepe illum cum? Aliquid?
+    </p>
+  ),
+  title: "example modal",
+};
+
 export const App = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [apiStatus, setApiStatus] = useState<string>("loading...");
@@ -75,7 +86,7 @@ export const App = () => {
         <Card icon={<AiOutlineBuild />} title="components">
           <label>
             modal
-            <Button onClick={() => showModal(<p>hello!</p>)}>test</Button>
+            <Button onClick={() => showModal(exampleModal)}>test</Button>
           </label>
           <label>
             notification
