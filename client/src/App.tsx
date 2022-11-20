@@ -117,8 +117,6 @@ export const App = () => {
           display: flex;
           justify-content: space-between;
           padding: var(--size-3);
-          position: sticky;
-          top: 100vh;
         `}
       >
         <a href="https://github.com/twsau">twsau</a>
