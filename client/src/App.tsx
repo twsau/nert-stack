@@ -6,6 +6,7 @@ import { ExampleModal } from "./views/modals";
 import { ExampleNotification } from "./views/notifications";
 import { ExampleTooltip } from "./views/tooltips";
 import styled from "styled-components/macro";
+import { Button } from "./components/Button";
 
 export const App = () => {
   const [loading, setLoading] = useState<boolean>(true);
