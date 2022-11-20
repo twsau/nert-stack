@@ -1,8 +1,8 @@
-import React from "react";
+import { EmailInput } from "./Email";
 import { NumberInput } from "./Number";
 import { TextInput } from "./Text";
 
 const allInputs: Record<string, ({ placeholder }: InputProps) => JSX.Element> =
-  { NumberInput, TextInput };
+  { EmailInput, NumberInput, TextInput };
 
 export default allInputs;

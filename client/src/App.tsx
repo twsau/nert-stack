@@ -136,6 +136,11 @@ export const App = () => {
                 placeholder: "0",
                 type: "NumberInput",
               },
+              {
+                label: "email field",
+                placeholder: "person@address.com",
+                type: "EmailInput",
+              },
             ]}
             onSubmit={(data) => console.log(data)}
           />

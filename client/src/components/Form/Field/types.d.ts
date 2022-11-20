@@ -4,4 +4,4 @@ interface FieldProps {
   type: FieldType;
 }
 
-type FieldType = "TextInput" | "NumberInput";
+type FieldType = "EmailInput" | "TextInput" | "NumberInput";
