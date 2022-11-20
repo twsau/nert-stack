@@ -138,12 +138,21 @@ export const App = () => {
                 min: 20,
                 name: "number field",
                 placeholder: "0",
+                required: true,
                 type: "NumberInput",
               },
               {
                 name: "email field",
                 placeholder: "person@address.com",
+                required: true,
                 type: "EmailInput",
+              },
+              {
+                name: "range",
+                min: 0,
+                max: 100,
+                required: true,
+                type: "RangeInput",
               },
             ]}
             onSubmit={(data: Record<string, any>) => console.log(data)}

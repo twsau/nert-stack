@@ -8,4 +8,4 @@ interface FieldProps {
   type: FieldType;
 }
 
-type FieldType = "EmailInput" | "TextInput" | "NumberInput";
+type FieldType = "EmailInput" | "TextInput" | "NumberInput" | "RangeInput";
