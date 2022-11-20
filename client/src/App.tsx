@@ -61,8 +61,8 @@ export const App = () => {
           </label>
           <label>
             tooltip
-            <Tooltip content={<ExampleTooltip />}>
-              <button>test</button>
+            <Tooltip content={<ExampleTooltip />} type="warning">
+              <p>hover me</p>
             </Tooltip>
           </label>
           <label>

@@ -1,29 +1,18 @@
 import { v4 as uuid } from "uuid";
 import ReactTooltip from "react-tooltip";
+import { TooltipContent } from "./style";
 
-interface ComponentProps {
-  children: React.ReactNode;
-  content: React.ReactNode;
-}
-
-export const Tooltip = ({ children, content }: ComponentProps) => {
+export const Tooltip = ({ children, content, type = "warning" }: TooltipProps) => {
   const id = uuid();
-
   return (
     <>
-      <div
-        css={`
-          display: contents;
-        `}
-        data-tip
-        data-for={id}
-      >
+      <TooltipContent data-tip data-for={id} type={type}>
         {children}
-      </div>
+      </TooltipContent>
       <ReactTooltip
         backgroundColor="var(--surface-1)"
         border={true}
-        borderColor="var(--accent)"
+        borderColor={type ? `var(--${type})` : `var(--surface-1)`}
         id={id}
       >
         {content}
