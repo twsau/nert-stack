@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
-// import { Card } from "./core/layout";
 import { Card } from "./components/Card";
-import { List, msg, Tooltip, useModal } from "./core/components";
 import { ExampleModal } from "./views/modals";
 import { ExampleNotification } from "./views/notifications";
 import { ExampleTooltip } from "./views/tooltips";
 import styled from "styled-components/macro";
 import { Button } from "./components/Button";
+import { useModal } from "./components/Modal";
+import { Tooltip } from "./components/Tooltip";
 import { FiActivity } from "react-icons/fi";
+import { notify } from "./components/Notification";
 
 export const App = () => {
   const [loading, setLoading] = useState<boolean>(true);
@@ -47,7 +48,22 @@ export const App = () => {
       <hr />
       <main>
         <Card icon={<FiActivity />} title="test">
-          hello
+          <label>
+            modal
+            <button onClick={() => showModal(<ExampleModal />)}>test</button>
+          </label>
+          <label>
+            notification
+            <button onClick={() => notify(<ExampleNotification />)}>
+              test
+            </button>
+          </label>
+          <label>
+            tooltip
+            <Tooltip content={<ExampleTooltip />}>
+              <button>test</button>
+            </Tooltip>
+          </label>
         </Card>
       </main>
 

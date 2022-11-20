@@ -13,4 +13,4 @@ export const Notifications = () => (
     }}
   />
 );
-export const msg = toast;
+export const notify = toast;

@@ -1,5 +1,6 @@
 import ReactDOM from "react-dom/client";
-import { Modal, Notifications } from "./core/components";
+import { Modal } from "./components/Modal";
+import { Notifications } from "./components/Notification";
 import { App } from "./App";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./config/theme";

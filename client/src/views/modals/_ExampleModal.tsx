@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useModal } from "../../core/components";
+import { useModal } from "../../components/Modal";
 
 const View = styled.div`
   display: flex;

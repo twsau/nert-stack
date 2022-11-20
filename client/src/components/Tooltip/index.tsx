@@ -1,6 +1,5 @@
 import { v4 as uuid } from "uuid";
 import ReactTooltip from "react-tooltip";
-import styled from "styled-components/macro";
 
 interface ComponentProps {
   children: React.ReactNode;
