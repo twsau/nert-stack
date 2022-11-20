@@ -1,6 +1,10 @@
 interface FieldProps {
-  label?: string;
+  max?: number | string;
+  min?: number | string;
+  name: string;
   placeholder?: string;
+  required?: boolean;
+  register: UseFormRegister<FieldValues>;
   type: FieldType;
 }
 

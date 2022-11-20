@@ -8,9 +8,16 @@ export const Form = ({ fields, onSubmit, showReset = false }: FormProps) => {
   const { register, handleSubmit } = useForm();
   const [data, setData] = useState();
   return (
-    <form onSubmit={onSubmit}>
-      {fields.map(({ label, placeholder, type }) => (
-        <Field label={label} placeholder={placeholder} type={type} />
+    <form onSubmit={handleSubmit(onSubmit)}>
+      {fields.map(({ name, placeholder, required, type }) => (
+        <Field
+          key={name}
+          name={name}
+          placeholder={placeholder}
+          register={register}
+          required={required}
+          type={type}
+        />
       ))}
       <FormActions>
         {showReset && (
@@ -19,7 +26,7 @@ export const Form = ({ fields, onSubmit, showReset = false }: FormProps) => {
           </Button>
         )}
 
-        <Button onClick={onSubmit} type="submit">
+        <Button onClick={handleSubmit(onSubmit)} type="submit">
           submit
         </Button>
       </FormActions>

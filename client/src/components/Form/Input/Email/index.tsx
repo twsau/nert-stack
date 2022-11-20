@@ -1,3 +1,12 @@
-export const EmailInput = ({ placeholder }: InputProps) => (
-  <input placeholder={placeholder} type="email" />
+export const EmailInput = ({
+  name,
+  placeholder,
+  register,
+  required,
+}: InputProps) => (
+  <input
+    {...register(name, { required: required })}
+    placeholder={placeholder}
+    type="email"
+  />
 );

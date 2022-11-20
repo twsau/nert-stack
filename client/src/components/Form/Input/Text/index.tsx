@@ -1,3 +1,7 @@
-export const TextInput = ({ placeholder }: InputProps) => (
-  <input placeholder={placeholder} type="text" />
+export const TextInput = ({ name, placeholder, register, required }: InputProps) => (
+  <input
+    {...register(name, { required: required })}
+    placeholder={placeholder}
+    type="text"
+  />
 );

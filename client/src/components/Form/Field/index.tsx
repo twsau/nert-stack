@@ -1,17 +1,12 @@
 import allInputs from "../Input";
 
-export const Field = ({ label, placeholder, type }: FieldProps) => {
+export const Field = ({ name, placeholder, register, type }: FieldProps) => {
   const Input = allInputs[type];
 
-  switch (label) {
-    case undefined:
-      return <Input placeholder={placeholder} />;
-    default:
-      return (
-        <label>
-          {label}
-          <Input placeholder={placeholder} />
-        </label>
-      );
-  }
+  return (
+    <label>
+      {name}
+      <Input name={name} placeholder={placeholder} register={register} />
+    </label>
+  );
 };

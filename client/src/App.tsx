@@ -127,17 +127,19 @@ export const App = () => {
           <Form
             fields={[
               {
-                label: "text field",
+                name: "text field",
                 placeholder: "example",
                 type: "TextInput",
               },
               {
-                label: "number field",
+                max: 100,
+                min: 20,
+                name: "number field",
                 placeholder: "0",
                 type: "NumberInput",
               },
               {
-                label: "email field",
+                name: "email field",
                 placeholder: "person@address.com",
                 type: "EmailInput",
               },
