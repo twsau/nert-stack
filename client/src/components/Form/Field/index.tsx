@@ -1,14 +1,15 @@
 import allInputs from "../Input";
+import { ErrorMessage, FieldValue } from "./style";
 
 export const Field = (args: FieldProps) => {
   const Input = allInputs[args.type];
-
-  console.log(args.min, args.max);
-
   return (
     <label>
       {args.name}
-      <Input {...args} />
+      <FieldValue>
+        <Input {...args} />
+        {args.error && <ErrorMessage>{args.error.message}</ErrorMessage>}
+      </FieldValue>
     </label>
   );
 };

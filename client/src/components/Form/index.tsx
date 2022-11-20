@@ -5,12 +5,22 @@ import { Field } from "./Field";
 import { FormActions } from "./styles";
 
 export const Form = ({ fields, onSubmit, showReset = false }: FormProps) => {
-  const { register, handleSubmit } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
   const [data, setData] = useState();
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       {fields.map((args) => (
-        <Field {...args} key={args.name} register={register} />
+        <Field
+          {...args}
+          key={args.name}
+          error={errors[args.name]}
+          register={register}
+        />
       ))}
       <FormActions>
         {showReset && (

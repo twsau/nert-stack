@@ -1,17 +1,22 @@
 export const TextInput = ({
-  max,
-  min,
+  minLength,
   name,
   placeholder,
   register,
   required,
-}: InputProps) => {
-  console.log(min, max)
-  return (
-    <input
-      {...register(name, { maxLength: max, minLength: min, required: required })}
-      placeholder={placeholder}
-      type="text"
-    />
-  );
-}
+}: InputProps) => (
+  <input
+    {...register(name, {
+      minLength: {
+        message: `value must be at least ${minLength} letters long`,
+        value: minLength,
+      },
+      required: {
+        message: "this field is required",
+        value: required,
+      },
+    })}
+    placeholder={placeholder}
+    type="text"
+  />
+);
