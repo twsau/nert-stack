@@ -7,7 +7,7 @@ import { ExampleNotification } from "./views/notifications";
 import { ExampleTooltip } from "./views/tooltips";
 import styled from "styled-components/macro";
 import { Button } from "./components/Button";
-import { Header } from "./components/Header";
+import { FiActivity } from "react-icons/fi";
 
 export const App = () => {
   const [loading, setLoading] = useState<boolean>(true);
@@ -46,7 +46,7 @@ export const App = () => {
       </header>
       <hr />
       <main>
-        <Card title="test" type="warning">
+        <Card icon={<FiActivity />} title="test">
           hello
         </Card>
       </main>

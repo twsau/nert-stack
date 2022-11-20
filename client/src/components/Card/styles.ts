@@ -32,3 +32,16 @@ export const CardTitle = styled.h3<{ type?: string }>`
       color: var(--${type});
     `}
 `;
+
+export const CardIcon = styled.span<{ type?: string }>`
+  color: var(--surface-4);
+  font-size: var(--size-8);
+  inset: var(--size-1) var(--size-1) auto auto;
+  position: absolute;
+
+  ${({ type }) =>
+    type &&
+    css`
+      color: var(--${type});
+    `}
+`;
