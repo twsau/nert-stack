@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
-import { Card } from "./core/layout";
+// import { Card } from "./core/layout";
+import { Card } from "./components/Card";
 import { List, msg, Tooltip, useModal } from "./core/components";
-import { Counter } from "./components";
 import { ExampleModal } from "./views/modals";
 import { ExampleNotification } from "./views/notifications";
 import { ExampleTooltip } from "./views/tooltips";
 import styled from "styled-components/macro";
 import { Button } from "./components/Button";
+import { Header } from "./components/Header";
 
 export const App = () => {
   const [loading, setLoading] = useState<boolean>(true);
@@ -26,16 +27,31 @@ export const App = () => {
     <>
       <header
         css={`
-          display: flex;
-          justify-content: center;
-          padding-block-start: var(--size-3);
+          display: grid;
+          place-items: center;
         `}
       >
-        <h2 className="text-gradient">
-          bossweb.dev<sup> / nert</sup>
-        </h2>
+        <h1>N E R T</h1>
+        <p
+          css={`
+            display: flex;
+            gap: var(--size-1);
+          `}
+        >
+          <a href="https://nodejs.dev/en/">node</a> |{" "}
+          <a href="https://expressjs.com/">express</a> |{" "}
+          <a href="https://reactjs.org/">react</a> |{" "}
+          <a href="https://www.typescriptlang.org/">typescript</a>
+        </p>
       </header>
-      <main
+      <hr />
+      <main>
+        <Card title="test" type="warning">
+          hello
+        </Card>
+      </main>
+
+      {/* <main
         css={`
           display: flex;
           flex-direction: column;
@@ -45,25 +61,6 @@ export const App = () => {
           max-width: var(--size-content-3);
         `}
       >
-        <hr />
-        <h1
-          className="text-gradient"
-          css={`
-            text-align: center;
-          `}
-        >
-          N E R T
-        </h1>
-        <p
-          css={`
-            text-align: center;
-          `}
-        >
-          <a href="https://nodejs.dev/en/">node</a> |{" "}
-          <a href="https://expressjs.com/">express</a> |{" "}
-          <a href="https://reactjs.org/">react</a> |{" "}
-          <a href="https://www.typescriptlang.org/">typescript</a>
-        </p>
         <hr />
         <Card title="about" type="primary">
           <p>
@@ -99,9 +96,6 @@ export const App = () => {
             API response: <code>{apiStatus}</code>
           </pre>
         </Card>
-        <Card title="state">
-          <Counter />
-        </Card>
         <Card title="core components">
           <label>
             modal
@@ -126,12 +120,11 @@ export const App = () => {
             <List numbered items={["egg", "cheese", "milk"]} />
           </label>
         </Card>
-      </main>
+      </main> */}
       <footer
         css={`
           display: flex;
           justify-content: space-between;
-          margin-block-start: var(--size-10);
           padding: var(--size-3);
           position: sticky;
           top: 100vh;

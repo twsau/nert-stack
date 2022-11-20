@@ -18,7 +18,7 @@ const palette = {
   orange: "#D08770",
   yellow: "#EBCB8B",
   green: "#A3BE8C",
-  info: "#B48EAD",
+  purple: "#B48EAD",
 };
 
 export const theme = {
