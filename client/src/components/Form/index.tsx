@@ -9,15 +9,8 @@ export const Form = ({ fields, onSubmit, showReset = false }: FormProps) => {
   const [data, setData] = useState();
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      {fields.map(({ name, placeholder, required, type }) => (
-        <Field
-          key={name}
-          name={name}
-          placeholder={placeholder}
-          register={register}
-          required={required}
-          type={type}
-        />
+      {fields.map((args) => (
+        <Field {...args} key={args.name} register={register} />
       ))}
       <FormActions>
         {showReset && (

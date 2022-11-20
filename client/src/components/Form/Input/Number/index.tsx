@@ -7,9 +7,7 @@ export const NumberInput = ({
   required,
 }: InputProps) => (
   <input
-    {...register(name, { required: required })}
-    max={max}
-    min={min}
+    {...register(name, { max: max, min: min, required: required })}
     placeholder={placeholder}
     type="number"
   />

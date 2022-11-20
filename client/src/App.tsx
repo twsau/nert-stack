@@ -127,8 +127,10 @@ export const App = () => {
           <Form
             fields={[
               {
-                name: "text field",
-                placeholder: "example",
+                name: "name",
+                min: 3,
+                placeholder: "your name...",
+                required: true,
                 type: "TextInput",
               },
               {
@@ -144,7 +146,7 @@ export const App = () => {
                 type: "EmailInput",
               },
             ]}
-            onSubmit={(data) => console.log(data)}
+            onSubmit={(data: Record<string, any>) => console.log(data)}
           />
         </Card>
       </main>

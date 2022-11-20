@@ -3,6 +3,6 @@ interface InputProps {
   min?: number | string;
   name: string;
   placeholder?: string | undefined;
-  register: UseFormRegister<FieldValues>;
+  register?: UseFormRegister<FieldValues>;
   required?: boolean;
 }

@@ -1,12 +1,14 @@
 import allInputs from "../Input";
 
-export const Field = ({ name, placeholder, register, type }: FieldProps) => {
-  const Input = allInputs[type];
+export const Field = (args: FieldProps) => {
+  const Input = allInputs[args.type];
+
+  console.log(args.min, args.max);
 
   return (
     <label>
-      {name}
-      <Input name={name} placeholder={placeholder} register={register} />
+      {args.name}
+      <Input {...args} />
     </label>
   );
 };

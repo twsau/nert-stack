@@ -4,7 +4,7 @@ interface FieldProps {
   name: string;
   placeholder?: string;
   required?: boolean;
-  register: UseFormRegister<FieldValues>;
+  register?: UseFormRegister<FieldValues>;
   type: FieldType;
 }
 
