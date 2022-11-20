@@ -7,6 +7,7 @@ import { Tooltip } from "./components/Tooltip";
 import { AiOutlineBuild, AiOutlineQuestionCircle } from "react-icons/ai";
 import { notify } from "./components/Notification";
 import { List } from "./components/List";
+import { Form } from "./components/Form";
 
 export const App = () => {
   const [loading, setLoading] = useState<boolean>(true);
@@ -110,6 +111,23 @@ export const App = () => {
           >
             API response: <code>{apiStatus}</code>
           </pre>
+        </Card>
+        <Card title="form" type="info">
+          <Form
+            fields={[
+              {
+                label: "text field",
+                placeholder: "example",
+                type: "TextInput",
+              },
+              {
+                label: "number field",
+                placeholder: "0",
+                type: "NumberInput",
+              },
+            ]}
+            onSubmit={(data) => console.log(data)}
+          />
         </Card>
       </main>
       <footer
