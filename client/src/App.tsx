@@ -9,6 +9,7 @@ import { useModal } from "./components/Modal";
 import { Tooltip } from "./components/Tooltip";
 import { FiActivity } from "react-icons/fi";
 import { notify } from "./components/Notification";
+import { List } from "./components/List";
 
 export const App = () => {
   const [loading, setLoading] = useState<boolean>(true);
@@ -63,6 +64,14 @@ export const App = () => {
             <Tooltip content={<ExampleTooltip />}>
               <button>test</button>
             </Tooltip>
+          </label>
+          <label>
+            lists
+            <List items={["egg", "cheese", "milk"]} />
+          </label>
+          <label>
+            numbered lists
+            <List items={["egg", "cheese", "milk"]} type="number" />
           </label>
         </Card>
       </main>
