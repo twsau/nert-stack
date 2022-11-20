@@ -1,9 +1,5 @@
 import { useEffect, useState } from "react";
 import { Card } from "./components/Card";
-import { ExampleModal } from "./views/modals";
-import { ExampleNotification } from "./views/notifications";
-import { ExampleTooltip } from "./views/tooltips";
-import styled from "styled-components/macro";
 import { Button } from "./components/Button";
 import { useModal } from "./components/Modal";
 import { Tooltip } from "./components/Tooltip";
@@ -47,47 +43,16 @@ export const App = () => {
         </p>
       </header>
       <hr />
-      <main>
-        <Card icon={<FiActivity />} title="test">
-          <label>
-            modal
-            <button onClick={() => showModal(<ExampleModal />)}>test</button>
-          </label>
-          <label>
-            notification
-            <button onClick={() => notify(<ExampleNotification />)}>
-              test
-            </button>
-          </label>
-          <label>
-            tooltip
-            <Tooltip content={<ExampleTooltip />} type="warning">
-              <p>hover me</p>
-            </Tooltip>
-          </label>
-          <label>
-            lists
-            <List items={["egg", "cheese", "milk"]} />
-          </label>
-          <label>
-            numbered lists
-            <List items={["egg", "cheese", "milk"]} type="number" />
-          </label>
-        </Card>
-      </main>
-
-      {/* <main
+      <main
         css={`
           display: flex;
-          flex-direction: column;
-          padding-inline: 1rem;
+          flex-wrap: wrap;
           gap: var(--size-3);
-          margin: 0 auto;
-          max-width: var(--size-content-3);
+          justify-content: center;
+          padding: var(--size-3);
         `}
       >
-        <hr />
-        <Card title="about" type="primary">
+        <Card title="about" type="info">
           <p>
             nert stack is everything you need to get started with build a react
             app in typescript. It has a built in nodejs / express backend with
@@ -105,7 +70,31 @@ export const App = () => {
             🔥🔥🔥
           </p>
         </Card>
-        <Card title="api" type="accent">
+        <Card icon={<FiActivity />} title="components">
+          <label>
+            modal
+            <Button onClick={() => showModal(<p>hello!</p>)}>test</Button>
+          </label>
+          <label>
+            notification
+            <Button onClick={() => notify("hello!")}>test</Button>
+          </label>
+          <label>
+            tooltip
+            <Tooltip content={<p>hello!</p>} type="warning">
+              <p>hover me</p>
+            </Tooltip>
+          </label>
+          <label>
+            lists
+            <List items={["egg", "cheese", "milk"]} />
+          </label>
+          <label>
+            numbered lists
+            <List items={["egg", "cheese", "milk"]} type="number" />
+          </label>
+        </Card>
+        <Card title="api" type="error">
           <p>
             Try editing <code>api.ts</code> to get started
           </p>
@@ -121,31 +110,7 @@ export const App = () => {
             API response: <code>{apiStatus}</code>
           </pre>
         </Card>
-        <Card title="core components">
-          <label>
-            modal
-            <button onClick={() => showModal(<ExampleModal />)}>test</button>
-          </label>
-          <label>
-            notification
-            <button onClick={() => msg(<ExampleNotification />)}>test</button>
-          </label>
-          <label>
-            tooltip
-            <Tooltip content={<ExampleTooltip />}>
-              <button>test</button>
-            </Tooltip>
-          </label>
-          <label>
-            lists
-            <List items={["egg", "cheese", "milk"]} />
-          </label>
-          <label>
-            numbered lists
-            <List numbered items={["egg", "cheese", "milk"]} />
-          </label>
-        </Card>
-      </main> */}
+      </main>
       <footer
         css={`
           display: flex;
